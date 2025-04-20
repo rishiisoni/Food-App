@@ -1,0 +1,153 @@
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    color: #49557e;
+    font-size: 16px;
+}
+
+.navbar .navbar-menu .active {
+    padding: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar .navbar-menu li {
+    cursor: pointer;
+}
+
+.navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .navbar-right button {
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: #49557e;
+    font-size: 13px;
+    border: 1px solid tomato;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-right button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    background-color: tomato;
+    min-height: 10px;
+    min-width: 10px;
+    border-radius: 50%;
+    top: -4px;
+    right: -6px;
+}
+
+.navbar-profile{
+    position: relative;
+}
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px #00000015;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img {
+    width: 20px;
+
+}
+.nav-profile-dropdown li:hover{
+    color: #B5292F ;
+}
+
+@media (max-width : 1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar .navbar-menu {
+        gap: 20px;
+        font-size: 15px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+
+    .navbar .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width : 900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar .navbar-menu {
+        gap: 15px;
+        font-size: 13px;
+    }
+    .navbar .navbar-right {
+        gap: 25px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+
+    .navbar .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width : 750px) {
+    .navbar .navbar-menu {
+        display: none;
+    }
+    .navbar-right img{
+        width: 18px;
+    }
+
+    .navbar .navbar-right button {
+        padding: 5px 18px;
+        font-size: 12px;
+    }
+}
